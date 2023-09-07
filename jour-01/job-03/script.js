@@ -1,19 +1,29 @@
-function myIsInString(haystack, needle) {
-    let end = needle.length
-    let bool = false
+function getLength(string) {
+    let i = 0
+    while (string[i])
+        i++
+    return i
+}
 
-    for (let i = 0; i < haystack.length; i++) {
-        let z = 0
-        let y = 0
-        if (haystack[i] == needle[y]) {
-            z = i
-            while (haystack[z] == needle[y]) {
-                z += 1
-                y += 1
-                
-            }
-        }
+
+function my_str_compare(string, compare, index) {
+    let fact = false
+
+    for (const i = 0; string[index] == compare[i]; i++) {
+        if (i == (getLength(compare) - 1)) {
+            fact = true;
+            break
+        } index += 1
     }
+    return fact;
+}
 
-    return bool
+function myIsInString(haystack, needle) {
+    let fact = false
+
+    for (let i = 0; i < getLength(haystack); i++) {
+        if (haystack[i] == needle[0])
+            if (fact = my_str_compare(haystack, needle, i)) break
+    }
+    return fact
 }
