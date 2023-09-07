@@ -1,5 +1,5 @@
 function myChangeBackgroundColor() {
-    var screenSize = window.innerWidth
+    let screenSize = window.innerWidth
 
     if (screenSize <= 500) {
         document.body.style.backgroundColor="#003049"
