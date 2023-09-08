@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="2">
+    <title>Tik Tac Toe</title>
+</head>
+<body>
+    <div id="board">
+        <p id="current-player">KARLOS</p>
+        <p id="message"></p>
+        <p id="turn">tours : </p>
+        <button id="play">Start Game</button>
+    </div>
+</body>
+<style>
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    #board {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        height: 500px;
+        background-color: rgb(221, 213, 200);
+        padding: 10px;
+    }
+
+    #play {
+        position: relative;
+        justify-content: flex-end;
+        flex-direction: column;
+        width: 100px;
+        height: 40px;
+    }
+
+    #current-player, #message {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 30px;
+        text-shadow: 0.5px 0.5px 2px;
+    }
+
+    .boxBoard{
+        font-size: 25px;
+    }
+</style>
+<script src="./class/script.js"></script>
+</html>
